@@ -1,0 +1,39 @@
+.cardContent {
+    margin-bottom: 0px !important;
+}
+
+.cardDescription {
+    display: flex;
+    justify-content: space-between;
+    min-height: 40px;
+}
+
+.hover {
+    animation: up 0.3s ease;
+    transform: translateY(-10px);
+
+    @keyframes up {
+        from {
+            transform: translateY(0px);
+        }
+
+        to {
+            transform: translateY(-10px);
+        }
+    }
+}
+
+.card {
+    animation: down 0.3s ease;
+    transform: translateY(0px);
+
+    @keyframes down {
+        from {
+            transform: translateY(-10px);
+        }
+
+        to {
+            transform: translateY(0px);
+        }
+    }
+}
