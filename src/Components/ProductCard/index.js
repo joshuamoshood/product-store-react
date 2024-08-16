@@ -19,6 +19,13 @@ const ProductCard = ({ product, loading }) => {
     setVisible(false);
   };
 
+  const formatter = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+  });
+
+  const formattedPrice = formatter.format(product.price);
+
   return (
     <div>
       <Card
@@ -47,7 +54,7 @@ const ProductCard = ({ product, loading }) => {
           description={
             <div className={style.cardDescription}>
               <SimpleParagraph
-                paragraph={`$${product.price}`}
+                paragraph={formattedPrice}
                 size={"1"}
                 weight={"400"}
                 css={style.cardContent}
